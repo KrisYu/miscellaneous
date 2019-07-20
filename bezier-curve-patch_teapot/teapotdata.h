@@ -1,9 +1,9 @@
 
 // Teapot data
 
-const static int kTeapotNumPatches = 32;
-const static int kTeapotNumVertices = 306;
-int teapotPatches[kTeapotNumPatches][16] = {
+const static int kNumPatches = 32;
+const static int kNumVertices = 306;
+int kPatches[kNumPatches][16] = {
 	{  1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,  13,  14,  15,  16},
 	{  4,  17,  18,  19,   8,  20,  21,  22,  12,  23,  24,  25,  16,  26,  27,  28},
 	{ 19,  29,  30,  31,  22,  32,  33,  34,  25,  35,  36,  37,  28,  38,  39,  40},
@@ -38,7 +38,7 @@ int teapotPatches[kTeapotNumPatches][16] = {
 	{270, 270, 270, 270, 300, 305, 306, 279, 297, 303, 304, 275, 294, 301, 302, 271}
 };
 
-Vec3f teapotVertices[kTeapotNumVertices] = {
+Vec3f kVertices[kNumVertices] = {
 	Vec3f( 1.4000,  0.0000,  2.4000),
 	Vec3f( 1.4000, -0.7840,  2.4000),
 	Vec3f( 0.7840, -1.4000,  2.4000),
