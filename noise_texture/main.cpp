@@ -40,14 +40,13 @@ int main(){
 
 	hitable *list[5];
 
-	list[0] = new sphere(vec3(0,0,-1),0.5, new lambertian(new constant_texture(vec3(0.8, 0.3, 0.3))));
-	list[1] = new sphere(vec3(0,-100.5,-1), 100, new lambertian(new noise_texture(5,10)));
-	list[2] = new sphere(vec3(1,0,-1), 0.5, new metal(vec3(0.8, 0.6, 0.2), 0.0));
-	list[3] = new sphere(vec3(-1,0,-1),0.5, new dielectric(1.5));
-	list[4] = new sphere(vec3(-1,0,-1), -0.45, new dielectric(1.5));
+  
+  list[0] = new sphere(vec3(0,-1000,0), 1000, new lambertian(new noise_texture(5,10)));
+  list[1] = new sphere(vec3(0,2,0), 2, new lambertian(new noise_texture(5,10)));
+  
 
-	hitable *world = new hitable_list(list, 5);
-	camera cam(vec3(-2,2,1),vec3(0,0,-1),vec3(0,1,0),40,float(nx)/float(ny));
+	hitable *world = new hitable_list(list, 2);
+  camera cam(vec3(13,2,3),vec3(0,0,0),vec3(0,1,0),20,float(nx)/float(ny));
 
 	for(int j = ny - 1; j >= 0; j--){
 		for (int i = 0; i < nx; i++){
