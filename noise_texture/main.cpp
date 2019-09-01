@@ -41,8 +41,8 @@ int main(){
 	hitable *list[5];
 
   
-  list[0] = new sphere(vec3(0,-1000,0), 1000, new lambertian(new noise_texture(5,10)));
-  list[1] = new sphere(vec3(0,2,0), 2, new lambertian(new noise_texture(5,10)));
+  list[0] = new sphere(vec3(0,-1000,0), 1000, new lambertian(new noise_texture(1,10)));
+  list[1] = new sphere(vec3(0,2,0), 2, new lambertian(new noise_texture(1,10)));
   
 
 	hitable *world = new hitable_list(list, 2);
